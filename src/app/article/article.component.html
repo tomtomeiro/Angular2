@@ -1,0 +1,19 @@
+<h2>Lista de articulos</h2>
+<div class="separador"></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let article of articles">
+        <td>{{article.id}}</td>
+        <td>{{article.title}}</td>
+        <td>{{article.body}}</td>
+
+    </tbody>
+
+</table>
+

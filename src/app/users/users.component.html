@@ -1,0 +1,36 @@
+<h2>{{title}}</h2>
+<div title="text-aling:left;">
+  <button class="btn btn-primary" (click)="goBack()">Page welcome </button>
+
+</div>
+
+<form #fu="ngForm" (ngSubmit)="onSubmit(fu)">
+    <span>Nombre: </span>
+    <input class="form-control" type="text" placeholder="nombre" name="nombre" ngModel>
+    <span>Apellido: </span>
+    <input class="form-control" type="text" placeholder="apellido" name="apellidos" ngModel>
+    <span>Edad: </span>
+    <input class="form-control" type="number" placeholder="edad" name="edad" ngModel>
+    
+
+    <span>Cantidad:</span>
+    <input class="form-control" type="number" placeholder="cantidad" name="cantidad" ngModel>
+    <span>Fecha: </span>
+    <input class="form-control" type="date" placeholder="fecha" name="fecha" ngModel>
+    <span>Tipo de gasto: </span>
+    <select class="form-control" name="tiposGastos" ngModel>
+        <option selected>-- Seleccionar --</option>
+        <option value="General">General</option >
+        <option value="Trabajo">Trabajo</option>
+        <option value="Despensa">Despensa</option>
+      </select>
+      <span>Descripcion de gastos: </span>
+      <textarea class="form-control" type="text" name="descripcion"  cols="30" rows="10" ngModel></textarea>
+    <input class="btn btn-success" type="submit" value="Guardar" >
+</form>
+
+<app-users-table [users]="users" [gastos]="gastos"></app-users-table>
+
+
+
+

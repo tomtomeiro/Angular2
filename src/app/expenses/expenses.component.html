@@ -1,0 +1,25 @@
+
+<div class="text-align: left">
+  <button (click)="goBack()">Regresar a welcome</button>
+
+</div>
+<form #fu="ngForm" (ngSubmit)="onSubmit(fu)">
+    <span>Cantidad:</span>
+    <input class="form-control" type="number" placeholder="cantidad" name="cantidad" ngModel>
+    <span>Fecha: </span>
+    <input class="form-control" type="date" placeholder="fecha" name="fecha" ngModel>
+    <span>Tipo de gasto: </span>
+    <select class="form-control" name="tiposGastos" ngModel>
+        <option selected>-- Seleccionar --</option>
+        <option value="General">General</option >
+        <option value="Trabajo">Trabajo</option>
+        <option value="Despensa">Despensa</option>
+      </select>
+      <span>Descripcion de gastos: </span>
+      <textarea class="form-control" type="text" name="descripcion"  cols="30" rows="10" ngModel></textarea>
+    <input class="btn btn-success" type="submit" value="Guardar" >
+</form>
+<app-expenses-table [expenses]="expenses" ></app-expenses-table>
+
+
+
