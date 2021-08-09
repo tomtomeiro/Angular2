@@ -11,17 +11,18 @@
             <th>descripcion</th>
         </tr>
     </thead>
+    <tbody class="table">
+        <thead>
+            <tr *ngFor="let expense of expenses; index as i;">
+                <th>{{expense.cantidad}}</th>
+                <hr>
+                <th>{{expense.fecha}}</th>
+                <hr>
+                <th>{{expense.tiposGastos}}</th>
+                <hr>
+                <th>{{expense.descripcion}}</th>
+            </tr>
+        </thead>  
+    </tbody>
 </table>
-<tbody class="table">
-    <thead>
-        <tr *ngFor="let expense of expenses; index as i;">
-            <th>{{expense.cantidad}}</th>
-            <hr>
-            <th>{{expense.fecha}}</th>
-            <hr>
-            <th>{{expense.tiposGastos}}</th>
-            <hr>
-            <th>{{expense.descripcion}}</th>
-        </tr>
-    </thead>  
-</tbody>
+
