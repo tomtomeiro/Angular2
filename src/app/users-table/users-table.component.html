@@ -32,17 +32,18 @@
             <th>descripcion</th>
         </tr>
     </thead>
+    <tbody>
+        <tr *ngFor="let gasto of gastos; index as i;">
+              <hr>
+              <td>{{gasto.cantidad}}</td>
+              <hr>
+              <td>{{gasto.fecha}}</td>
+              <hr>
+              <td>{{gasto.tiposGastos}}</td>
+              <hr>
+              <td>{{gasto.descripcion}}</td>  
+          </tr>
+      </tbody>
 </table>
-<tbody>
-  <tr *ngFor="let gasto of gastos; index as i;">
-        <hr>
-        <td>{{gasto.cantidad}}</td>
-        <hr>
-        <td>{{gasto.fecha}}</td>
-        <hr>
-        <td>{{gasto.tiposGastos}}</td>
-        <hr>
-        <td>{{gasto.descripcion}}</td>  
-    </tr>
-</tbody>
+
 
