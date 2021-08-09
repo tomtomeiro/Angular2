@@ -9,17 +9,18 @@
             <th>Edad</th>
         </tr>
     </thead>
+    <tbody>
+        <tr *ngFor="let user of users; index as i;">
+             <hr>
+             <td>{{user.nombre}}</td>
+             <hr>
+             <td>{{user.apellidos}}</td>
+             <hr>
+             <td>{{user.edad}}</td>    
+         </tr>
+     </tbody>
 </table>
-<tbody>
-   <tr *ngFor="let user of users; index as i;">
-        <hr>
-        <td>{{user.nombre}}</td>
-        <hr>
-        <td>{{user.apellidos}}</td>
-        <hr>
-        <td>{{user.edad}}</td>    
-    </tr>
-</tbody>
+
 <table class="table">
     <thead>
         <tr>
