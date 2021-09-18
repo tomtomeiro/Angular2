@@ -6,6 +6,9 @@ import { Observable, throwError } from 'rxjs';
 import {retry, catchError } from 'rxjs/Operators';
 
 
+
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +23,18 @@ export class RestApiService {
     .pipe(retry(1))
   }
   getComments(): Observable<Comment>{
-    return this.http.get<Comment>(this.base_url+'/posts')
+    return this.http.get<Comment>(this.base_url+'/comments')
     .pipe(retry(1))
+  }
+  getArticleP(){
+    return new Promise((resolve, reject)=>{
+      this.http.get(this.base_url+'/posts').subscribe(data=>{
+        resolve(data);
+      },err=>{
+        console.log(err)
+        reject(err)
+        
+      })
+    })
   }
 }
